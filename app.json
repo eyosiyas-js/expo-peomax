@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Peomax",
+    "slug": "BookAddis",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/favicon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "com.koket.peomax",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.koket.peomax"
+    },
+    "android": {
+      "permissions": ["INTERNET", "ACCESS_FINE_LOCATION"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/ic_launcher.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.koket.peomax"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "08b0b1bd-062e-4ed6-8518-71d193c2fe03"
+      }
+    },
+    "owner": "eyosiyas"
+  }
+}
