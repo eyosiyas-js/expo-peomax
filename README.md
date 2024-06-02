@@ -1,5 +1,5 @@
 
-# Made using React + Material UI
+# Made using React Native 
 
 
 
