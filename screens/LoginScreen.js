@@ -25,11 +25,11 @@ export default function LoginScreen() {
 
   const [request, response, promptAsync] = Google.useAuthRequest({
     expoClientId:
-      '434304454034-dt9o5hqnc9lklcj4olu9ar1beal9rpsk.apps.googleusercontent.com',
+      '434304454034-dt9o5hqnc9lklcj4olu9ar1beal9rpsk.apps.googleusercontent.com', // don't use mine , use ur own
     iosClientId:
-      '434304454034-jr152oentu83jh0fartl6cbcpnr9nuk7.apps.googleusercontent.com',
+      '434304454034-jr152oentu83jh0fartl6cbcpnr9nuk7.apps.googleusercontent.com', // don't use mine , use ur own
     androidClientId:
-      '434304454034-5i0dgdm3iqhs15fb0tahbfehd2jsv8bt.apps.googleusercontent.com',
+      '434304454034-5i0dgdm3iqhs15fb0tahbfehd2jsv8bt.apps.googleusercontent.com',  // don't use mine , use ur own
     scopes: ['profile', 'email'],
     shouldAutoExchangeCode:
       Constants.executionEnvironment !== ExecutionEnvironment.StoreClient
@@ -53,8 +53,6 @@ export default function LoginScreen() {
       if (response.ok) {
         const userData = await response.json()
 
-        // Now you have access to the user's data like name, email, etc.
-        // Handle the user data as needed (e.g., store it in state or use it directly)
         return userData
       } else {
         console.error('Failed to fetch user data')
@@ -70,8 +68,6 @@ export default function LoginScreen() {
     const excute = async () => {
       if (response?.type === 'success') {
         const { authentication } = response
-        // Now you can use the authentication object to make requests to the Google API
-        // For example: fetchUserProfile(authentication.accessToken)
         const user = await fetchUserProfile(authentication.accessToken)
 
         try {
